@@ -1,4 +1,8 @@
 input.onButtonPressed(Button.A, function () {
+    Index += 1
+})
+let Index = 0
+basic.forever(function () {
     if (Index == 0) {
         basic.showString("T")
     }
@@ -13,12 +17,11 @@ input.onButtonPressed(Button.A, function () {
     }
     if (Index == 4) {
         basic.showIcon(IconNames.StickFigure)
-    }
-    Index += 1
-    if (Index == 5) {
-        music.startMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once)
+        music.playTone(262, music.beat(BeatFraction.Sixteenth))
+        music.playTone(262, music.beat(BeatFraction.Sixteenth))
+        music.playTone(262, music.beat(BeatFraction.Sixteenth))
+        music.playTone(262, music.beat(BeatFraction.Sixteenth))
+        basic.pause(5000)
         Index = 0
     }
 })
-let Index = 0
-Index = 0
