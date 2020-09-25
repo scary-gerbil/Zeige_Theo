@@ -16,8 +16,8 @@ input.onButtonPressed(Button.A, function () {
     }
     Index += 1
     if (Index == 5) {
+        music.startMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once)
         Index = 0
-        music.startMelody(music.builtInMelody(Melodies.Funk), MelodyOptions.Once)
     }
 })
 let Index = 0
