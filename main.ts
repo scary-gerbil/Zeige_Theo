@@ -17,11 +17,21 @@ basic.forever(function () {
     }
     if (Index == 4) {
         basic.showIcon(IconNames.StickFigure)
-        music.playTone(262, music.beat(BeatFraction.Sixteenth))
-        music.playTone(262, music.beat(BeatFraction.Sixteenth))
-        music.playTone(262, music.beat(BeatFraction.Sixteenth))
-        music.playTone(262, music.beat(BeatFraction.Sixteenth))
-        basic.pause(5000)
+        for (let index = 0; index < 2; index++) {
+            music.playTone(349, music.beat(BeatFraction.Half))
+            music.playTone(440, music.beat(BeatFraction.Half))
+            music.playTone(349, music.beat(BeatFraction.Half))
+            music.playTone(392, music.beat(BeatFraction.Half))
+        }
+        for (let index = 0; index < 2; index++) {
+            music.playTone(440, music.beat(BeatFraction.Half))
+            music.playTone(494, music.beat(BeatFraction.Half))
+            music.playTone(523, music.beat(BeatFraction.Whole))
+        }
+        music.playTone(523, music.beat(BeatFraction.Quarter))
+        music.playTone(587, music.beat(BeatFraction.Quarter))
+        music.playTone(523, music.beat(BeatFraction.Quarter))
+        basic.pause(2000)
         Index = 0
     }
 })
